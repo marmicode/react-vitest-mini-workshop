@@ -13,6 +13,10 @@ autoInstallPeers: true
 
 injectWorkspacePackages: true
 
+# Disable this because the `cook` CLI removes `apps/*` packages from the workspace.
+# This slows down users each time they start a new exercise.
+verifyDepsBeforeRun: false
+
 # webpackbar@6 replaces ProgressPlugin#options and breaks webpack 5.106+ schema validation; v7 fixes it.
 overrides:
   webpackbar: 7.0.0
